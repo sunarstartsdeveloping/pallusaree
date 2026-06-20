@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>The Pallu Stories | Authentic Handwoven Sarees & Heritage Craft</title>
+  <meta name="description" content="Explore @the.pallustories - a curated collection of handloom sarees including terracotta gold silks, indigo jamdani weaves, and sage green linens, honoring traditional weavers.">
+  <meta name="keywords" content="handloom, saree, silk saree, jamdani, linen saree, indian textile, artisan craft, sustainable fashion">
+  <link rel="canonical" href="https://thepallustories.example.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thepallustories.example.com/">
+  <meta property="og:title" content="The Pallu Stories | Authentic Handwoven Heritage Sarees">
+  <meta property="og:description" content="Immerse yourself in the craft of handwoven Indian textiles. Explore our signature collection of silk, jamdani, and linen sarees.">
+  <meta property="og:image" content="assets/hero_saree.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://thepallustories.example.com/">
+  <meta property="twitter:title" content="The Pallu Stories | Authentic Handwoven Heritage Sarees">
+  <meta property="twitter:description" content="Immerse yourself in the craft of handwoven Indian textiles. Explore our signature collection of silk, jamdani, and linen sarees.">
+  <meta property="twitter:image" content="assets/hero_saree.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/jamdani_cotton.png">
+
+  <!-- Stylesheets -->
+  <style>
+/* 
+   @the.pallustories - Design System & Custom Styles
+   Warm Linen, Terracotta, and Sage Green Color System
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-linen-bg: #FCFAF6;
+  --color-linen-card: #F7F3EC;
+  --color-linen-border: #E8E1D5;
+  --color-linen-dark: #DCD2C3;
+  
+  --color-terracotta: #C2593F;
+  --color-terracotta-dark: #9F432F;
+  --color-terracotta-light: #F6ECE8;
+  --color-terracotta-glow: rgba(194, 89, 63, 0.15);
+  
+  --color-sage: #6E7F6B;
+  --color-sage-dark: #536250;
+  --color-sage-light: #EEF2ED;
+  --color-sage-glow: rgba(110, 127, 107, 0.15);
+  
+  --color-charcoal: #2B2A27;
+  --color-charcoal-muted: #615F59;
+  --color-charcoal-light: #8E8B83;
+  
+  --color-gold: #CCA43B;
+  --color-gold-light: #F9F5EB;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Transitions */
+  --transition-slow: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-fast: all 0.25s ease;
+
+  /* Shadow & Blur */
+  --shadow-subtle: 0 4px 24px rgba(43, 42, 39, 0.03);
+  --shadow-premium: 0 16px 40px rgba(43, 42, 39, 0.06);
+  --shadow-modal: 0 24px 64px rgba(43, 42, 39, 0.15);
+  --glass-blur: blur(12px);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-linen-bg);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-linen-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-linen-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-charcoal-light);
+}
+
+/* Typography Selection */
+::selection {
+  background-color: var(--color-terracotta-light);
+  color: var(--color-terracotta-dark);
+}
+
+/* Typography elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-charcoal-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sticky Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(252, 250, 246, 0.8);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(232, 225, 213, 0.5);
+  transition: var(--transition-smooth);
+}
+
+header.scrolled {
+  padding: 0.5rem 0;
+  background-color: rgba(252, 250, 246, 0.95);
+  box-shadow: var(--shadow-subtle);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  transition: var(--transition-smooth);
+}
+
+header.scrolled .header-container {
+  height: 65px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  color: var(--color-terracotta);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-charcoal-muted);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-terracotta);
+  transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+  color: var(--color-charcoal);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--color-charcoal);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-charcoal-muted);
+  font-size: 1.15rem;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.icon-btn:hover {
+  color: var(--color-terracotta);
+  transform: translateY(-1px);
+}
+
+.icon-btn .badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--color-terracotta);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-charcoal);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 85px;
+  background-color: var(--color-linen-card);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-linen-card) 0%, rgba(247, 243, 236, 0.4) 50%, rgba(247, 243, 236, 0) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 4rem 0;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-sage);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.hero-title span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-terracotta);
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--color-charcoal-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: 0;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-terracotta);
+  color: #fff;
+  border: 1px solid var(--color-terracotta);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-terracotta-dark);
+  border-color: var(--color-terracotta-dark);
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-linen-bg);
+  transform: translateY(-2px);
+}
+
+/* Sections Global */
+.section {
+  padding: 8rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 5rem auto;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-sage);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.section-title span {
+  font-style: italic;
+  color: var(--color-terracotta);
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-linen-dark);
+  margin: 1.5rem auto 0 auto;
+}
+
+/* Heritage / Loom Section */
+.heritage-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.heritage-image {
+  position: relative;
+  box-shadow: var(--shadow-premium);
+}
+
+.heritage-image img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.heritage-image::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--color-sage);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.heritage-content {
+  padding-right: 2rem;
+}
+
+.heritage-badge {
+  color: var(--color-terracotta);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.heritage-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.heritage-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.heritage-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  border-left: 2px solid var(--color-terracotta);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: var(--color-charcoal);
+}
+
+/* Catalog Filter Section */
+.catalog-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--color-linen-border);
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  color: var(--color-charcoal-muted);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+
+.filter-btn.active {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #fff;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Product Card */
+.product-card {
+  background-color: var(--color-linen-card);
+  border: 1px solid rgba(232, 225, 213, 0.4);
+  overflow: hidden;
+  transition: var(--transition-slow);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-premium);
+  border-color: var(--color-linen-dark);
+}
+
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-linen-bg);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background-color: rgba(252, 250, 246, 0.9);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-sage-dark);
+  border: 1px solid rgba(232, 225, 213, 0.6);
+  z-index: 5;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 42, 39, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+  z-index: 4;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.btn-quickview {
+  background-color: var(--color-linen-bg);
+  color: var(--color-charcoal);
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  transform: translateY(15px);
+}
+
+.product-card:hover .btn-quickview {
+  transform: translateY(0);
+}
+
+.btn-quickview:hover {
+  background-color: var(--color-terracotta);
+  color: #fff;
+}
+
+.product-info {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-charcoal-light);
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  color: var(--color-charcoal);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(232, 225, 213, 0.5);
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+}
+
+.product-detail-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.product-detail-link i {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-detail-link i {
+  transform: translateX(4px);
+}
+
+/* Lightbox Modal (Quick View) */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(43, 42, 39, 0.6);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 2rem;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  background-color: var(--color-linen-bg);
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  box-shadow: var(--shadow-modal);
+  position: relative;
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.lightbox.active .lightbox-content {
+  transform: scale(1) translateY(0);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--color-linen-bg);
+  border: 1px solid var(--color-linen-border);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-charcoal);
+  font-size: 1.2rem;
+  z-index: 10;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-subtle);
+}
+
+.close-lightbox:hover {
+  background-color: var(--color-terracotta);
+  color: white;
+  border-color: var(--color-terracotta);
+  transform: rotate(90deg);
+}
+
+.lightbox-gallery {
+  position: relative;
+  background-color: var(--color-linen-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 90vh;
+}
+
+.lightbox-details {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lightbox-cat {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-sage);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.lightbox-title {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.lightbox-price {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-terracotta);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.lightbox-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-charcoal-muted);
+  margin-bottom: 2rem;
+}
+
+.lightbox-meta {
+  border-top: 1px solid var(--color-linen-border);
+  border-bottom: 1px solid var(--color-linen-border);
+  padding: 1.2rem 0;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.meta-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-charcoal-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.meta-item strong {
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  font-weight: 500;
+}
+
+/* Inquiry Form inside Lightbox */
+.inquiry-form h4 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-linen-border);
+  background-color: var(--color-linen-bg);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-charcoal);
+  border-radius: 0;
+  transition: var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 3px var(--color-terracotta-glow);
+}
+
+.btn-submit-inquiry {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-charcoal);
+  color: white;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-submit-inquiry:hover {
+  background-color: var(--color-terracotta);
+}
+
+/* Success State inside Form */
+.success-msg {
+  display: none;
+  background-color: var(--color-sage-light);
+  color: var(--color-sage-dark);
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid rgba(110, 127, 107, 0.2);
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-linen-bg);
+  padding: 5rem 0 3rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand .logo {
+  color: var(--color-linen-bg);
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand .logo span {
+  color: var(--color-gold);
+}
+
+.footer-brand p {
+  color: var(--color-linen-dark);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  color: var(--color-linen-dark);
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--color-linen-dark);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-gold);
+  padding-left: 5px;
+}
+
+.footer-newsletter h4 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  color: var(--color-linen-dark);
+}
+
+.footer-newsletter p {
+  color: var(--color-linen-dark);
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-input {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-charcoal-muted);
+  background-color: transparent;
+  color: var(--color-linen-bg);
+  border-right: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.newsletter-input::placeholder {
+  color: var(--color-charcoal-light);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.newsletter-btn {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal);
+  border: none;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.newsletter-btn:hover {
+  background-color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-charcoal-muted);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--color-charcoal-light);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: var(--color-linen-dark);
+  font-size: 1.1rem;
+  transition: var(--transition-fast);
+}
+
+.social-links a:hover {
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  .section {
+    padding: 6rem 0;
+  }
+  .heritage-grid {
+    gap: 3rem;
+  }
+  .lightbox-content {
+    grid-template-columns: 1fr;
+    max-height: 95vh;
+  }
+  .lightbox-gallery img {
+    max-height: 45vh;
+    width: 100%;
+  }
+  .lightbox-details {
+    padding: 2rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    height: 70px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-linen-bg);
+    border-bottom: 1px solid var(--color-linen-border);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: var(--shadow-medium);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: var(--transition-smooth);
+    z-index: 99;
+  }
+  .nav-links.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .hero {
+    flex-direction: column;
+    padding-top: 70px;
+  }
+  .hero-bg {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+  }
+  .hero-bg::after {
+    background: linear-gradient(180deg, rgba(247, 243, 236, 0) 50%, var(--color-linen-card) 100%);
+  }
+  .hero-content {
+    max-width: 100%;
+    padding: 3rem 2rem;
+  }
+  .heritage-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .heritage-image img {
+    height: 380px;
+  }
+  .heritage-content {
+    padding-right: 0;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+</style>
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" style="background-color: var(--color-terracotta); color: white; text-align: center; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; z-index: 101; position: relative;">
+    Celebrating Indian Craftsmanship • Free Shipping Worldwide
+  </div>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <div class="container header-container">
+      <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <a href="#" class="logo" id="brand-logo">
+        THE PALLU<span>stories</span>
+      </a>
+      
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="primary-nav-links">
+          <li><a href="#" class="active" id="nav-home">Home</a></li>
+          <li><a href="#heritage" id="nav-heritage">Our Heritage</a></li>
+          <li><a href="#collection" id="nav-collection">The Collection</a></li>
+          <li><a href="#journal" id="nav-journal">Weaver's Journal</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="icon-btn" id="search-trigger" aria-label="Search Catalog">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="wishlist-trigger" aria-label="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <button class="icon-btn" id="cart-trigger" aria-label="View Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+      <div class="hero-bg" style="background-image: url('assets/hero_saree.png');" role="img" aria-label="A beautiful terracotta and gold silk saree draped gracefully."></div>
+      <div class="container">
+        <div class="hero-content animate-fade-in-up">
+          <span class="hero-subtitle">Handwoven Heritage</span>
+          <h1 class="hero-title">The Art of the <span>Handloom</span> Saree</h1>
+          <p class="hero-desc">
+            Every thread woven into our sarees carries a lineage of craftsmanship. Crafted meticulously in warm terracotta silk, deep indigo cotton, and sage linen by master artisans.
+          </p>
+          <div class="btn-group">
+            <a href="#collection" class="btn btn-primary" id="hero-cta-primary">Explore Collection</a>
+            <a href="#heritage" class="btn btn-secondary" id="hero-cta-secondary">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Heritage Story Section -->
+    <section class="section heritage" id="heritage">
+      <div class="container">
+        <div class="heritage-grid">
+          <div class="heritage-image animate-fade-in">
+            <img src="assets/weaving_loom.png" alt="A traditional wooden weaving loom in warm workshop lighting." id="heritage-loom-img">
+          </div>
+          <div class="heritage-content">
+            <span class="heritage-badge">The Weaver's Breath</span>
+            <h2 class="heritage-title">Preserving Centuries of Craft</h2>
+            <p class="heritage-text">
+              At @the.pallustories, we support rural artisan cooperatives across India. By keeping ancient techniques alive, each saree represents weeks of dedication, slow luxury, and unique design patterns passed down through generations.
+            </p>
+            <p class="heritage-text">
+              We focus on premium natural fibers: mulberry silks, organic hand-spun cotton, and Belgian flax linen, colored using mineral and plant dyes.
+            </p>
+            <blockquote class="heritage-quote">
+              "We do not just weave yarn; we weave stories of patience, soil, and heritage."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="section collection-section" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Exquisite Weaves</span>
+          <h2 class="section-title">The Signature <span>Collection</span></h2>
+          <p>Filter by textile category to explore the craftsmanship behind each unique piece.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Filter Navigation -->
+        <div class="catalog-filters" id="catalog-filter-bar">
+          <button class="filter-btn active" data-filter="all" id="filter-btn-all">All Pieces</button>
+          <button class="filter-btn" data-filter="silk" id="filter-btn-silk">Gold Silks</button>
+          <button class="filter-btn" data-filter="jamdani" id="filter-btn-jamdani">Indigo Jamdanis</button>
+          <button class="filter-btn" data-filter="linen" id="filter-btn-linen">Sage Linens</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-catalog-grid">
+          
+          <!-- Product 1 -->
+          <article class="product-card" data-category="silk">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Masterpiece</span>
+              <img src="assets/hero_saree.png" alt="Terracotta silk saree with golden border details" class="product-img">
+              <div class="product-overlay">
+                <button class="btn-quickview" data-product-id="saree-001">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Pure Mulberry Silk</span>
+              <h3 class="product-title">The Terracotta Zari Saree</h3>
+              <div class="product-footer">
+                <span class="product-price">$540</span>
+                <a href="#" class="product-detail-link" data-product-id="saree-001">Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" data-category="jamdani">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Handspun</span>
+              <img src="assets/jamdani_cotton.png" alt="Indigo Jamdani handloom cotton saree" class="product-img">
+              <div class="product-overlay">
+                <button class="btn-quickview" data-product-id="saree-002">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Indigo Weave</span>
+              <h3 class="product-title">The Royal Jamdani Cotton</h3>
+              <div class="product-footer">
+                <span class="product-price">$380</span>
+                <a href="#" class="product-detail-link" data-product-id="saree-002">Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" data-category="linen">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Organic</span>
+              <img src="assets/linen_saree.png" alt="Sage green pure linen saree with silver border" class="product-img">
+              <div class="product-overlay">
+                <button class="btn-quickview" data-product-id="saree-003">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Belgian Flax Linen</span>
+              <h3 class="product-title">The Sage Forest Linen</h3>
+              <div class="product-footer">
+                <span class="product-price">$290</span>
+                <a href="#" class="product-detail-link" data-product-id="saree-003">Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" data-category="silk">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Festive</span>
+              <img src="assets/hero_saree.png" alt="Golden zari border crimson silk saree" class="product-img" style="filter: hue-rotate(340deg);">
+              <div class="product-overlay">
+                <button class="btn-quickview" data-product-id="saree-004">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Kanchipuram Style Silk</span>
+              <h3 class="product-title">The Crimson Shlok Saree</h3>
+              <div class="product-footer">
+                <span class="product-price">$490</span>
+                <a href="#" class="product-detail-link" data-product-id="saree-004">Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card" data-category="jamdani">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Exclusive</span>
+              <img src="assets/jamdani_cotton.png" alt="Geometric floral motif indigo cotton jamdani" class="product-img" style="filter: brightness(0.9) contrast(1.1);">
+              <div class="product-overlay">
+                <button class="btn-quickview" data-product-id="saree-005">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Dhaka Handloom</span>
+              <h3 class="product-title">The Neelambari Motif Saree</h3>
+              <div class="product-footer">
+                <span class="product-price">$420</span>
+                <a href="#" class="product-detail-link" data-product-id="saree-005">Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card" data-category="linen">
+            <div class="product-image-wrapper">
+              <span class="product-badge">Loom Fresh</span>
+              <img src="assets/linen_saree.png" alt="Meadow green linen saree with gold threads" class="product-img" style="filter: saturate(0.8) sepia(0.2);">
+              <div class="product-overlay">
+                <button class="btn-quickview" data-product-id="saree-006">Quick View</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Loom Woven Flax</span>
+              <h3 class="product-title">The Meadow Mist Linen</h3>
+              <div class="product-footer">
+                <span class="product-price">$310</span>
+                <a href="#" class="product-detail-link" data-product-id="saree-006">Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Immersive Lightbox Modal -->
+  <div class="lightbox" id="product-detail-lightbox" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="lightbox-content">
+      <button class="close-lightbox" id="modal-close-btn" aria-label="Close details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <!-- Left side: Image -->
+      <div class="lightbox-gallery">
+        <img src="assets/hero_saree.png" alt="Detailed view of selected saree" id="modal-saree-img">
+      </div>
+      
+      <!-- Right side: Details & Inquiry Form -->
+      <div class="lightbox-details">
+        <span class="lightbox-cat" id="modal-saree-category">Pure Mulberry Silk</span>
+        <h3 class="lightbox-title" id="modal-title">The Terracotta Zari Saree</h3>
+        <span class="lightbox-price" id="modal-price">$540</span>
+        
+        <p class="lightbox-desc" id="modal-description">
+          A glorious masterpiece handcrafted over 140 artisan-hours. Features a vibrant, warm terracotta-toned body made of premium high-twist mulberry silk, paired with a gorgeous zari-infused heritage gold pallu showing traditional geometric handloom grids.
+        </p>
+        
+        <div class="lightbox-meta">
+          <div class="meta-item">
+            <span>Crafting Time</span>
+            <strong id="modal-craft-time">140 Hours</strong>
+          </div>
+          <div class="meta-item">
+            <span>Origin Region</span>
+            <strong id="modal-origin">Varanasi, India</strong>
+          </div>
+          <div class="meta-item">
+            <span>Yarn Count</span>
+            <strong id="modal-yarn">2/80s Mulberry Silk</strong>
+          </div>
+          <div class="meta-item">
+            <span>Weave Technique</span>
+            <strong id="modal-weave">Kadwa Handloom</strong>
+          </div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <section class="inquiry-form">
+          <h4>Artisan Piece Inquiry</h4>
+          <form id="artisan-inquiry-form">
+            <div class="form-group">
+              <input type="text" class="form-input" id="inquiry-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="inquiry-email" placeholder="Your Email Address" required>
+            </div>
+            <button type="submit" class="btn-submit-inquiry" id="inquiry-submit-btn">Send Inquiry</button>
+          </form>
+          <div class="success-msg" id="inquiry-success-notification">
+            <i class="fa-solid fa-circle-check"></i> Inquiry received. Our textile curator will email you within 24 hours.
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">THE PALLU<span>stories</span></a>
+          <p>
+            An ethical atelier crafting sustainable luxury, celebrating the traditional weavers of rural India through bespoke natural textile stories.
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="#collection">Terracotta Silk</a></li>
+            <li><a href="#collection">Indigo Jamdani</a></li>
+            <li><a href="#collection">Sage Linen</a></li>
+            <li><a href="#collection">New Arrivals</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Atelier</h4>
+          <ul>
+            <li><a href="#heritage">Our Heritage</a></li>
+            <li><a href="#journal">Weaver Cooperative</a></li>
+            <li><a href="#">Sustaining Craft</a></li>
+            <li><a href="#">Contact Curator</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h4>The Weave Letter</h4>
+          <p>Receive stories about craftsmanship, artisan interviews, and private access to limited collection launches.</p>
+          <form class="newsletter-form" id="footer-newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your Email Address" aria-label="Your Email Address" required>
+            <button type="submit" class="newsletter-btn" id="newsletter-submit-btn" aria-label="Subscribe to Weave Letter">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Pallu Stories. All handloom rights reserved. Designed for craft conservation.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/the.pallustories" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="Follow us on Pinterest">
+            <i class="fa-brands fa-pinterest"></i>
+          </a>
+          <a href="#" aria-label="Follow us on Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+/**
+ * @the.pallustories - Interactive Application Logic
+ * Implements catalog filtering, lightbox interactions, form handling, and layout scroll effects.
+ */
+
+// Product Dataset
+const sareeProducts = {
+  "saree-001": {
+    title: "The Terracotta Zari Saree",
+    category: "Pure Mulberry Silk",
+    price: "$540",
+    image: "assets/hero_saree.png",
+    craftTime: "140 Hours",
+    origin: "Varanasi, India",
+    yarn: "2/80s Mulberry Silk",
+    weave: "Kadwa Handloom",
+    desc: "A glorious masterpiece handcrafted over 140 artisan-hours. Features a vibrant, warm terracotta-toned body made of premium high-twist mulberry silk, paired with a gorgeous zari-infused heritage gold pallu showing traditional geometric handloom grids."
+  },
+  "saree-002": {
+    title: "The Royal Jamdani Cotton",
+    category: "Indigo Weave",
+    price: "$380",
+    image: "assets/jamdani_cotton.png",
+    craftTime: "180 Hours",
+    origin: "West Bengal, India",
+    yarn: "100s Fine Cotton",
+    weave: "Daccai Jamdani",
+    desc: "Immerse in the light, airy grace of fine handloom cotton. Dyed with deep natural indigo, this saree features delicate floral leaf hand-woven patterns. Made by master artisans using traditional supplementary weft techniques."
+  },
+  "saree-003": {
+    title: "The Sage Forest Linen",
+    category: "Belgian Flax Linen",
+    price: "$290",
+    image: "assets/linen_saree.png",
+    craftTime: "90 Hours",
+    origin: "Bhagalpur, India",
+    yarn: "60s Count Organic Linen",
+    weave: "Plain Loom with Zari Border",
+    desc: "Crafted with pure organic flax fibers, this sage-green linen saree displays a gorgeous soft textured fall. Complete with a subtle, narrow silver zari border, it is ideal for modern, mindful, understated luxury."
+  },
+  "saree-004": {
+    title: "The Crimson Shlok Saree",
+    category: "Kanchipuram Style Silk",
+    price: "$490",
+    image: "assets/hero_saree.png",
+    imageStyle: "filter: hue-rotate(340deg);",
+    craftTime: "160 Hours",
+    origin: "Tamil Nadu, India",
+    yarn: "3-Ply Mulberry Silk",
+    weave: "Kanjivaram Handloom",
+    desc: "An opulent deep crimson saree featuring authentic gold thread detailing. The heavy body weight and solid zari pallu make this piece a magnificent heritage bridal choice that can be passed down as an heirloom."
+  },
+  "saree-005": {
+    title: "The Neelambari Motif Saree",
+    category: "Dhaka Handloom",
+    price: "$420",
+    image: "assets/jamdani_cotton.png",
+    imageStyle: "filter: brightness(0.9) contrast(1.1);",
+    craftTime: "220 Hours",
+    origin: "Dhaka Region",
+    yarn: "120s Superfine Cotton",
+    weave: "Traditional Jamdani",
+    desc: "A museum-worthy design featuring intricate geometric star motifs woven across a deep indigo night sky cotton field. This gossamer-thin fabric is incredibly light and represents the pinnacle of supplementary-weft handlooms."
+  },
+  "saree-006": {
+    title: "The Meadow Mist Linen",
+    category: "Loom Woven Flax",
+    price: "$310",
+    image: "assets/linen_saree.png",
+    imageStyle: "filter: saturate(0.8) sepia(0.2);",
+    craftTime: "110 Hours",
+    origin: "Bhagalpur, India",
+    yarn: "80s Organic Flax Linen",
+    weave: "Interspersed Zari Loom",
+    desc: "Reflecting the serene hues of morning dew on grass, this sage-infused linen saree integrates subtle gold and copper threads into the linen body. Breathable, durable, and highlighting natural irregular slub texture."
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Navigation & Scroll Interactions ---
+  const header = document.getElementById("main-header");
+  const menuToggle = document.getElementById("menu-toggle-btn");
+  const navLinks = document.getElementById("primary-nav-links");
+  const allNavItems = navLinks.querySelectorAll("a");
+
+  // Sticky navbar scroll effect
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  // Mobile menu toggle
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    const icon = menuToggle.querySelector("i");
+    if (navLinks.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // Close mobile menu on clicking links and set active state
+  allNavItems.forEach(link => {
+    link.addEventListener("click", (e) => {
+      // Highlight active nav item
+      allNavItems.forEach(item => item.classList.remove("active"));
+      link.classList.add("active");
+
+      // Close mobile drawer
+      navLinks.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+
+
+  // --- Catalog Filtering Logic ---
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove active from all buttons
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filterValue = btn.getAttribute("data-filter");
+
+      productCards.forEach(card => {
+        const category = card.getAttribute("data-category");
+
+        if (filterValue === "all" || category === filterValue) {
+          // Fade in/show
+          card.style.display = "flex";
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "scale(1) translateY(0)";
+          }, 50);
+        } else {
+          // Fade out/hide
+          card.style.opacity = "0";
+          card.style.transform = "scale(0.95) translateY(10px)";
+          setTimeout(() => {
+            card.style.display = "none";
+          }, 300);
+        }
+      });
+    });
+  });
+
+
+  // --- Lightbox / Quick View Modal Logic ---
+  const lightbox = document.getElementById("product-detail-lightbox");
+  const closeLightboxBtn = document.getElementById("modal-close-btn");
+  const modalImg = document.getElementById("modal-saree-img");
+  const modalCategory = document.getElementById("modal-saree-category");
+  const modalTitle = document.getElementById("modal-title");
+  const modalPrice = document.getElementById("modal-price");
+  const modalDesc = document.getElementById("modal-description");
+  const modalCraft = document.getElementById("modal-craft-time");
+  const modalOrigin = document.getElementById("modal-origin");
+  const modalYarn = document.getElementById("modal-yarn");
+  const modalWeave = document.getElementById("modal-weave");
+
+  // Form elements in Modal
+  const inquiryForm = document.getElementById("artisan-inquiry-form");
+  const inquirySubmitBtn = document.getElementById("inquiry-submit-btn");
+  const inquirySuccess = document.getElementById("inquiry-success-notification");
+
+  // Open modal handler
+  const openModal = (productId) => {
+    const data = sareeProducts[productId];
+    if (!data) return;
+
+    // Reset Form & Success states
+    inquiryForm.reset();
+    inquiryForm.style.display = "block";
+    inquirySuccess.style.display = "none";
+    inquirySubmitBtn.disabled = false;
+    inquirySubmitBtn.innerText = "Send Inquiry";
+
+    // Populate Modal Content
+    modalImg.src = data.image;
+    modalImg.alt = data.title;
+    if (data.imageStyle) {
+      modalImg.style = data.imageStyle;
+    } else {
+      modalImg.removeAttribute("style");
+    }
+
+    modalCategory.innerText = data.category;
+    modalTitle.innerText = data.title;
+    modalPrice.innerText = data.price;
+    modalDesc.innerText = data.desc;
+    modalCraft.innerText = data.craftTime;
+    modalOrigin.innerText = data.origin;
+    modalYarn.innerText = data.yarn;
+    modalWeave.innerText = data.weave;
+
+    // Open Modal Visuals
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden"; // Disable scroll
+  };
+
+  // Close modal handler
+  const closeModal = () => {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = ""; // Re-enable scroll
+  };
+
+  // Bind clicks on quick view buttons and detail links
+  document.addEventListener("click", (e) => {
+    const quickviewBtn = e.target.closest(".btn-quickview");
+    const detailLink = e.target.closest(".product-detail-link");
+    
+    if (quickviewBtn) {
+      e.preventDefault();
+      const productId = quickviewBtn.getAttribute("data-product-id");
+      openModal(productId);
+    } else if (detailLink) {
+      e.preventDefault();
+      const productId = detailLink.getAttribute("data-product-id");
+      openModal(productId);
+    }
+  });
+
+  // Bind close buttons
+  closeLightboxBtn.addEventListener("click", closeModal);
+
+  // Close on clicking backdrop
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeModal();
+    }
+  });
+
+  // Close on ESC key
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("active")) {
+      closeModal();
+    }
+  });
+
+
+  // --- Inquiry Form Submission Handling ---
+  inquiryForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    // Disable inputs and button
+    inquirySubmitBtn.disabled = true;
+    inquirySubmitBtn.innerText = "Submitting...";
+
+    // Simulate Server Request (e.g. 1000ms delay)
+    setTimeout(() => {
+      // Fade out form and fade in success notification
+      inquiryForm.style.transition = "opacity 0.3s ease";
+      inquiryForm.style.opacity = "0";
+
+      setTimeout(() => {
+        inquiryForm.style.display = "none";
+        inquiryForm.style.opacity = "1"; // Reset opacity for next open
+        
+        inquirySuccess.style.display = "block";
+        inquirySuccess.style.opacity = "0";
+        inquirySuccess.style.transition = "opacity 0.3s ease";
+        
+        // Trigger reflow
+        inquirySuccess.offsetHeight;
+        inquirySuccess.style.opacity = "1";
+      }, 300);
+
+      // Increment Bag/Curator inquiry count as an interactive visual cue
+      const cartBadge = document.querySelector("#cart-trigger .badge");
+      if (cartBadge) {
+        let currentCount = parseInt(cartBadge.innerText) || 0;
+        cartBadge.innerText = currentCount + 1;
+        cartBadge.style.transform = "scale(1.3)";
+        setTimeout(() => {
+          cartBadge.style.transform = "scale(1)";
+          cartBadge.style.transition = "transform 0.3s ease";
+        }, 300);
+      }
+    }, 1000);
+  });
+
+
+  // --- Simple Newsletter Subscription Mock ---
+  const newsletterForm = document.getElementById("footer-newsletter-form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailInput = newsletterForm.querySelector(".newsletter-input");
+      const subBtn = document.getElementById("newsletter-submit-btn");
+
+      if (emailInput && emailInput.value) {
+        subBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+        subBtn.style.backgroundColor = "var(--color-sage)";
+        subBtn.style.color = "white";
+        emailInput.value = "";
+        emailInput.disabled = true;
+        emailInput.placeholder = "Subscription successful!";
+
+        setTimeout(() => {
+          emailInput.disabled = false;
+          emailInput.placeholder = "Your Email Address";
+          subBtn.innerHTML = '<i class="fa-solid fa-arrow-right-long"></i>';
+          subBtn.style.backgroundColor = "";
+          subBtn.style.color = "";
+        }, 4000);
+      }
+    });
+  }
+
+  // --- Dynamic Search Trigger Alert (UX) ---
+  const searchBtn = document.getElementById("search-trigger");
+  if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+      const query = prompt("What type of handloom are you looking for? (e.g. Silk, Jamdani, Linen)");
+      if (query) {
+        const filterLower = query.toLowerCase();
+        let found = false;
+        
+        filterButtons.forEach(btn => {
+          const filterVal = btn.getAttribute("data-filter");
+          if (filterLower.includes(filterVal) || filterVal.includes(filterLower)) {
+            btn.click();
+            found = true;
+          }
+        });
+
+        if (!found) {
+          alert(`Searching for details on "${query}"... Under construction.`);
+        }
+      }
+    });
+  }
+
+  // Wishlist Interaction (UX toggle)
+  const wishlistBtn = document.getElementById("wishlist-trigger");
+  if (wishlistBtn) {
+    wishlistBtn.addEventListener("click", () => {
+      const heartIcon = wishlistBtn.querySelector("i");
+      if (heartIcon.classList.contains("fa-regular")) {
+        heartIcon.classList.remove("fa-regular");
+        heartIcon.classList.add("fa-solid");
+        heartIcon.style.color = "var(--color-terracotta)";
+        alert("Atelier piece bookmarked to wishlist.");
+      } else {
+        heartIcon.classList.remove("fa-solid");
+        heartIcon.classList.add("fa-regular");
+        heartIcon.style.color = "";
+      }
+    });
+  }
+});
+
+</script>
+</body>
+</html>
